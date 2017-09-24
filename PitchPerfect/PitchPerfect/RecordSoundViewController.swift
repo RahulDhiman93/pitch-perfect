@@ -31,11 +31,15 @@ class RecordSoundViewController: UIViewController,AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func controlUI(isrecord: Bool,isnotrecord : Bool, message: String){
+        recordbutton.isEnabled=isrecord
+        stopRecordingButton.isEnabled=isnotrecord
+        recordingLabel.text = message
+    }
 
     @IBAction func recordAudio(_ sender: Any) {
-        recordbutton.isEnabled=false
-        stopRecordingButton.isEnabled=true
-        recordingLabel.text = "recording in progress"
+        controlUI(isrecord: false, isnotrecord: true, message: "Recording in process")
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -52,9 +56,7 @@ class RecordSoundViewController: UIViewController,AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     @IBAction func stopRecording(_ sender: Any) {
-        recordbutton.isEnabled=true
-        stopRecordingButton.isEnabled=false
-        recordingLabel.text = "Tap to Record!"
+        controlUI(isrecord: true, isnotrecord: false, message: "Tap to Record")
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
