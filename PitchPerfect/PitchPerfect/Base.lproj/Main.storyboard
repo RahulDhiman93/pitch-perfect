@@ -147,15 +147,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="32D-0C-Af1">
                                         <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tw-5b-mf9">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU5-4V-g7A">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="64" id="q6o-hP-Lgq"/>
-                                                    <constraint firstAttribute="width" constant="64" id="rCR-rG-iGc"/>
+                                                    <constraint firstAttribute="height" constant="64" id="UwN-qZ-YUm"/>
+                                                    <constraint firstAttribute="width" constant="64" id="tUA-1h-yGE"/>
                                                 </constraints>
                                                 <state key="normal" image="Stop"/>
                                                 <connections>
-                                                    <action selector="stopButtonPressed:" destination="gcJ-0a-hS4" eventType="touchUpInside" id="aWU-vp-QWH"/>
+                                                    <action selector="stopButtonPressed:" destination="gcJ-0a-hS4" eventType="touchUpInside" id="YtY-ve-Doh"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -178,7 +178,7 @@
                         <outlet property="rabbitButton" destination="2oa-PN-BFF" id="yZV-7z-4db"/>
                         <outlet property="reverbButton" destination="prV-n6-nfM" id="lEb-Ky-3De"/>
                         <outlet property="snailButton" destination="5zo-LN-XRR" id="2Pp-2Q-99n"/>
-                        <outlet property="stopButton" destination="7tw-5b-mf9" id="0yc-uV-meK"/>
+                        <outlet property="stopButton" destination="LU5-4V-g7A" id="h34-0U-lgz"/>
                         <outlet property="vaderButton" destination="UNZ-Lm-4jA" id="1yv-7u-c7M"/>
                     </connections>
                 </viewController>
